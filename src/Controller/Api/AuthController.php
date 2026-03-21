@@ -12,6 +12,14 @@ use Symfony\Component\Routing\Annotation\Route;
 final class AuthController extends AbstractController
 {
     /**
+     * @Route("/api/login", name="api_login", methods={"POST"})
+     */
+    public function login(): void
+    {
+        throw new \LogicException('Login is handled by the security firewall.');
+    }
+
+    /**
      * @Route("/api/me", name="api_me", methods={"GET"})
      */
     public function me(): JsonResponse
